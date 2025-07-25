@@ -1,0 +1,74 @@
+{
+  "llm": {
+    "default_provider": "anthropic",
+    "fallback_order": ["anthropic", "openai", "gemini", "mock"],
+    "timeout": "30s",
+    "providers": {
+      "anthropic": {
+        "api_key": "sk-ant-api03-your-api-key-here",
+        "model": "claude-3-5-sonnet-20241022",
+        "max_tokens": 4096,
+        "temperature": 0.7,
+        "enabled": true
+      },
+      "openai": {
+        "api_key": "sk-proj-your-api-key-here",
+        "model": "gpt-4o",
+        "max_tokens": 4096,
+        "temperature": 0.7,
+        "enabled": true
+      },
+      "gemini": {
+        "api_key": "AIzaSy-your-api-key-here",
+        "model": "gemini-1.5-pro",
+        "max_tokens": 4096,
+        "temperature": 0.7,
+        "enabled": true
+      },
+      "mock": {
+        "model": "mock-model",
+        "max_tokens": 4096,
+        "temperature": 0.7,
+        "enabled": true
+      }
+    }
+  },
+  "agent": {
+    "name": "AI Agent",
+    "version": "0.1.0",
+    "auto_mode": false,
+    "interactive": true,
+    "log_level": "info"
+  },
+  "logging": {
+    "enabled": false,
+    "log_dir": "./logs",
+    "max_sessions": 50,
+    "comment": "Enable with CLI flag --log-interactions or set enabled: true"
+  },
+  "cli": {
+    "prompt": "🧑 You: ",
+    "show_tokens": true,
+    "show_timings": true,
+    "history_size": 100,
+    "enable_colors": true
+  },
+  "tools": {
+    "enabled_tools": ["api_call", "file_read", "search_docs"],
+    "api_endpoints": {
+      "your_api": "https://api.example.com"
+    },
+    "max_retries": 3
+  },
+  "search": {
+    "documents_path": "./docs",
+    "index_path": "./index",
+    "max_results": 10
+  },
+  "security": {
+    "allow_api_access": true,
+    "allow_file_access": true,
+    "restricted_paths": ["/etc", "/sys", "/proc"],
+    "require_confirm": true
+  }
+}

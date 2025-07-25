@@ -1,0 +1,14 @@
+{
+  "user_name": "Santi",
+  "organization": "TechClub Barcelona",
+  "role": "developer",
+  "preferences": {
+    "timezone": "Europe/Madrid",
+    "language": "Spanish"
+  },
+  "metadata": {
+    "favorite_api": "billing",
+    "experience_level": "advanced",
+    "api_host": "api.billingengine.com"
+  }
+}
